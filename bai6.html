@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+<body>
+<script>
+let input = +prompt('Nhap tien:');
+let hoaHong;
+if (input <= 2000000 && input >0){
+hoaHong = input * 3 /100;
+} else if (input <= 5000000){
+hoaHong = 2000000 * 3 /100 + (input - 2000000)*5/100 ;
+} else {
+hoaHong = 2000000 * 3 /100 + 3000000*5/100 + (input - 5000000) *10/100;
+}
+alert('Hoa hong: ' + hoaHong);
+</script>
+</body>
+</html>
