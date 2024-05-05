@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<body>
+<script>
+//Viết chương trình để tính cước điện thoại bàn cho một hộ gia đình với các thông số như sau:
+//Phí thuê bao bắt buộc là 25 nghìn.
+//600 đồng cho mỗi gọi của 50 phút đầu tiên.
+//400 đồng cho mỗi phút gọi của 150 phút tiếp theo.
+//200 đồng cho bất kỳ mỗi phút nào sau 200 phút đầu tiên.
+
+//function formatCash(str) {
+// 	return str.split('').reverse().reduce((prev, next, index) => {
+// 		return ((index % 3) ? next : (next + ',')) + prev
+// 	})
+//}
+//---------------------------------------------------------------
+let input = +prompt('Nhap so phut da su dung:');
+let moneyPay;
+if (input <= 50 && input >0){
+moneyPay = input * 600;
+} else if (input <= 150){
+moneyPay = 50 * 600 + (input - 50)*400;
+} else {
+moneyPay = 50 * 600 + 150*400 + (input - 200) *200;
+}
+let moneyPay1 = moneyPay + 25000;
+let moneyPay2 = moneyPay1.toString();
+let moneyPay3 = moneyPay2.replace(/\B(?=(\d{3})+(?!\d))/g, ',');
+alert('Tra tien: ' + moneyPay3 + ' dong');
+</script>
+</body>
+</html>
